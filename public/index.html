@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agente Público — seu problema tem endereço certo</title>
+<meta name="description" content="Um agente no WhatsApp que mostra quem é responsável, o que já foi feito e como cobrar. De graça, independente e sem partido. Entre na lista.">
+<meta property="og:title" content="Agente Público">
+<meta property="og:description" content="Seu problema tem endereço certo. O agente público te ajuda a achar.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4EFE4">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="wrap top">
+  <a href="#topo" aria-label="Agente Público, início"><img src="/logo.svg" alt="agente público" width="746" height="230"></a>
+  <a class="btn" href="#lista">Entrar na lista</a>
+</header>
+
+<main id="topo">
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-main">
+    <h1 id="h1" class="display">seu problema tem endereço certo. <span class="b">o agente público te ajuda a achar.</span></h1>
+    <p class="sub">Um agente no WhatsApp que mostra quem é responsável, o que já foi feito e como cobrar. De graça.</p>
+    <div id="lista">
+      <form class="lista" data-origem="hero" novalidate>
+        <div class="row2">
+          <div class="field"><label for="nome-hero">Nome</label><input id="nome-hero" name="nome" type="text" autocomplete="given-name" required></div>
+          <div class="field"><label for="zap-hero">WhatsApp</label><input id="zap-hero" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" required></div>
+        </div>
+        <fieldset class="field"><legend>Cidade</legend>
+          <div class="chips">
+            <input type="radio" id="c1-hero" name="cidade" value="Rio de Janeiro"><label for="c1-hero">Rio de Janeiro</label>
+            <input type="radio" id="c2-hero" name="cidade" value="São Paulo"><label for="c2-hero">São Paulo</label>
+            <input type="radio" id="c3-hero" name="cidade" value="Outra"><label for="c3-hero">Outra</label>
+          </div>
+        </fieldset>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+        <p class="erro" role="alert" hidden></p>
+        <div><button class="btn" type="submit">Quero entrar na lista</button></div>
+        <p class="micro">Independente e sem partido. Sair apaga tudo.</p>
+        <p class="consent">Ao entrar, você aceita receber avisos do Agente Público por WhatsApp. Usamos seu número só para isso. Você pode sair quando quiser e seus dados são apagados.</p>
+      </form>
+      <div class="ok" tabindex="-1" hidden>
+        <h3>Pronto, você está na lista.</h3>
+        <p>Avisamos por WhatsApp quando abrirmos na sua cidade.</p>
+        <p class="mono prev" hidden>Pré-visualização: nenhum dado foi enviado.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="sym"><img src="/mark-hero.svg" alt=""></div>
+    <div class="blocks"><div class="a"></div><div class="m mono">Perceber · agir · empoderar</div><div class="u"></div></div>
+  </div>
+</section>
+
+<section class="problema" aria-labelledby="h-prob">
+  <svg class="deco" viewBox="0 0 400 400" aria-hidden="true">
+    <polygon points="200,10 390,200 200,390 10,200" fill="#FFC72C"/>
+    <circle cx="200" cy="200" r="84" fill="#F4EFE4"/>
+    <path d="M30 262 Q210 150 380 236" stroke="#1E3FBF" stroke-width="26" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <h2 id="h-prob" class="display">Reclamar sozinho cansa.</h2>
+    <p>Buraco na rua, posto sem remédio, escola sem material. Quase todo mundo já passou por isso, e quase ninguém sabe a quem cobrar.</p>
+  </div>
+</section>
+
+<section class="como" aria-labelledby="h-como">
+  <div class="wrap">
+    <div>
+      <h2 id="h-como" class="t">Como funciona</h2>
+      <ol class="steps">
+        <li>Manda sua reclamação pro agente público.</li>
+        <li>Ele descobre quem é o responsável e busca dados públicos da sua região.</li>
+        <li>Com a sua autorização, ele registra a demanda e acompanha o requerimento.</li>
+      </ol>
+    </div>
+    <div class="phone" role="group" aria-label="Exemplo de conversa no WhatsApp">
+      <div class="screen">
+        <div class="ph-head"><div class="av"><img src="/mark.svg" alt=""></div><div><b>agente público</b><span>apartidário · dados oficiais</span></div></div>
+        <div class="chat">
+          <div class="msg eu">Tem um buraco enorme na minha rua há 3 meses. Quem resolve isso?</div>
+          <div class="msg ag">Manutenção de ruas é responsabilidade da <strong>prefeitura</strong>. No Rio, o canal oficial é a Central 1746.</div>
+          <div class="msg ag">Quer que eu registre o pedido por você? Só faço isso com a sua autorização e te mando o número do protocolo.</div>
+          <div class="opts" aria-hidden="true"><span class="opt s">Sim, pode registrar</span><span class="opt n">Só o contato</span></div>
+          <div class="fonte">Fonte: Prefeitura do Rio · Central 1746</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="verif" aria-labelledby="h-verif">
+  <div class="wrap">
+    <div>
+      <h2 id="h-verif" class="display">O dono da verdade.</h2>
+      <p class="q">Viu algo no grupo da família? Pergunte antes de repassar.</p>
+      <p class="t2">O agente responde com dados oficiais e fontes confiáveis, e mostra de onde veio cada informação.</p>
+    </div>
+    <div class="mesa" aria-hidden="true">
+      <div class="selo f"><span class="mono">Dado oficial</span><b>fato ✓</b></div>
+      <div class="selo x"><span class="mono">Sem fonte</span><b>falso ×</b></div>
+      <div class="selo m"><span class="mono">Falta contexto</span><b>meia-verdade</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <h2 id="h-faq" class="t">Perguntas frequentes</h2>
+    <div class="faq-g">
+      <div><h3>Quanto custa?</h3><p>Nada.</p></div>
+      <div><h3>Vocês são ligados a algum partido ou governo?</h3><p>Não. O projeto é independente e apartidário.</p></div>
+      <div><h3>O que acontece com meus dados?</h3><p>Usamos só para te avisar quando abrirmos na sua cidade e para entender onde há mais demanda. Você pode sair da lista quando quiser.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="entrar" aria-labelledby="h-final">
+  <div class="wrap">
+    <div>
+      <h2 id="h-final" class="display">Estamos começando e vamos pra cidade com mais pessoas interessadas.</h2>
+      <p class="txt">Quanto mais gente na lista, mais rápido chegamos na sua cidade.</p>
+    </div>
+    <div>
+      <form class="lista" data-origem="convite-final" novalidate>
+        <div class="row2">
+          <div class="field"><label for="nome-final">Nome</label><input id="nome-final" name="nome" type="text" autocomplete="given-name" required></div>
+          <div class="field"><label for="zap-final">WhatsApp</label><input id="zap-final" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" required></div>
+        </div>
+        <fieldset class="field"><legend>Cidade</legend>
+          <div class="chips">
+            <input type="radio" id="c1-final" name="cidade" value="Rio de Janeiro"><label for="c1-final">Rio de Janeiro</label>
+            <input type="radio" id="c2-final" name="cidade" value="São Paulo"><label for="c2-final">São Paulo</label>
+            <input type="radio" id="c3-final" name="cidade" value="Outra"><label for="c3-final">Outra</label>
+          </div>
+        </fieldset>
+      <div class="field"><label for="tema-final">O que mais te incomoda hoje? <span style="font-weight:400">(opcional)</span></label>
+        <select id="tema-final" name="tema"><option value="">Escolha um tema</option><option>Saúde</option><option>Transporte</option><option>Segurança</option><option>Educação</option><option>Saneamento</option><option>Outro</option></select></div>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+        <p class="erro" role="alert" hidden></p>
+        <div><button class="btn ouro" type="submit">Quero entrar na lista</button></div>
+        <p class="micro">Independente e sem partido. Sair apaga tudo.</p>
+        <p class="consent">Ao entrar, você aceita receber avisos do Agente Público por WhatsApp. Usamos seu número só para isso. Você pode sair quando quiser e seus dados são apagados.</p>
+      </form>
+      <div class="ok" tabindex="-1" hidden>
+        <h3>Pronto, você está na lista.</h3>
+        <p>Avisamos por WhatsApp quando abrirmos na sua cidade.</p>
+        <p class="mono prev" hidden>Pré-visualização: nenhum dado foi enviado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="/logo.svg" alt="agente público" width="746" height="230">
+    <p>Independente e sem partido</p>
+  </div>
+</footer>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

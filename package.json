@@ -1,0 +1,14 @@
+{
+  "name": "agente-publico",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page do Agente Público, com lista de espera.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo skip"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
