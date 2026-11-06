@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const { parseBrWhatsapp } = require("./public/phone");
 
 const PORT = Number(process.env.PORT) || 5173;
 const DATA_DIR = path.join(__dirname, "data");
@@ -23,13 +24,11 @@ function saveSignups(rows) {
 
 function validate(body) {
   const nome = String(body.nome || "").trim();
-  const whatsapp = String(body.whatsapp || "").replace(/\D/g, "");
+  const phone = parseBrWhatsapp(body.whatsapp);
   const cidade = String(body.cidade || "");
   const tema = String(body.tema || "");
   if (nome.length < 2) return "Diga seu nome para a gente te avisar.";
-  if (whatsapp.length < 10 || whatsapp.length > 13) {
-    return "Confira o número do WhatsApp, com DDD.";
-  }
+  if (!phone.ok) return phone.message;
   if (!CIDADES.has(cidade)) return "Escolha sua cidade.";
   if (!TEMAS.has(tema)) return "Escolha um tema válido.";
   return null;
@@ -57,7 +56,7 @@ app.post("/api/lista", (req, res) => {
   const row = {
     data: body.data || new Date().toISOString(),
     nome: String(body.nome).trim(),
-    whatsapp: String(body.whatsapp).replace(/\D/g, ""),
+    whatsapp: parseBrWhatsapp(body.whatsapp).digits,
     cidade: body.cidade,
     tema: body.tema || "",
     origem: body.origem || "",

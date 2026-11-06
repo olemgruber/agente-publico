@@ -110,7 +110,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 
 /* faq */
 .faq .wrap{padding-block:clamp(56px,8vw,104px)}
-.faq-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:36px}
+.faq-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:36px}
 @media (max-width:859px){.faq-g{grid-template-columns:1fr}}
 .faq-g div{border-top:2px solid var(--tinta);padding-top:16px}
 .faq-g h3{margin:0 0 8px;font-size:22px;line-height:1.2;font-weight:800;font-stretch:90%}

@@ -18,6 +18,17 @@ var ENDPOINT =
       err.textContent = msg;
       err.hidden = false;
     }
+    var zapInput = form.querySelector("input[name=whatsapp]");
+    zapInput.addEventListener("input", function () {
+      var formatted = window.agentePhone.formatBrWhatsapp(zapInput.value);
+      if (zapInput.value !== formatted) zapInput.value = formatted;
+    });
+    zapInput.addEventListener("blur", function () {
+      if (!zapInput.value.trim()) return;
+      var phone = window.agentePhone.parseBrWhatsapp(zapInput.value);
+      if (!phone.ok) fail(phone.message);
+      else err.hidden = true;
+    });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       err.hidden = true;
@@ -26,15 +37,15 @@ var ENDPOINT =
         return;
       }
       var nome = (fd.get("nome") || "").trim();
-      var zap = String(fd.get("whatsapp") || "").replace(/\D/g, "");
+      var phone = window.agentePhone.parseBrWhatsapp(fd.get("whatsapp"));
       var cidade = fd.get("cidade");
       if (nome.length < 2) {
         fail("Diga seu nome para a gente te avisar.");
         form.nome.focus();
         return;
       }
-      if (zap.length < 10 || zap.length > 13) {
-        fail("Confira o número do WhatsApp, com DDD.");
+      if (!phone.ok) {
+        fail(phone.message);
         form.whatsapp.focus();
         return;
       }
@@ -45,7 +56,7 @@ var ENDPOINT =
       var payload = {
         data: new Date().toISOString(),
         nome: nome,
-        whatsapp: zap,
+        whatsapp: phone.digits,
         cidade: cidade,
         tema: fd.get("tema") || "",
         origem: form.getAttribute("data-origem"),

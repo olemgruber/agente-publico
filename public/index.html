@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agente Público — seu problema tem endereço certo</title>
-<meta name="description" content="Um agente no WhatsApp que mostra quem é responsável, o que já foi feito e como cobrar. De graça, independente e sem partido. Entre na lista.">
+<meta name="description" content="Um agente no WhatsApp que mostra quem é responsável, o que já foi feito e como cobrar. De graça. Entre na lista.">
 <meta property="og:title" content="Agente Público">
 <meta property="og:description" content="Seu problema tem endereço certo. O agente público te ajuda a achar.">
 <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
       <form class="lista" data-origem="hero" novalidate>
         <div class="row2">
           <div class="field"><label for="nome-hero">Nome</label><input id="nome-hero" name="nome" type="text" autocomplete="given-name" required></div>
-          <div class="field"><label for="zap-hero">WhatsApp</label><input id="zap-hero" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" required></div>
+          <div class="field"><label for="zap-hero">WhatsApp</label><input id="zap-hero" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" maxlength="15" required></div>
         </div>
         <fieldset class="field"><legend>Cidade</legend>
           <div class="chips">
@@ -43,7 +43,7 @@
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
         <p class="erro" role="alert" hidden></p>
         <div><button class="btn" type="submit">Quero entrar na lista</button></div>
-        <p class="micro">Independente e sem partido. Sair apaga tudo.</p>
+        <p class="micro">Sair apaga tudo.</p>
         <p class="consent">Ao entrar, você aceita receber avisos do Agente Público por WhatsApp. Usamos seu número só para isso. Você pode sair quando quiser e seus dados são apagados.</p>
       </form>
       <div class="ok" tabindex="-1" hidden>
@@ -83,7 +83,7 @@
     </div>
     <div class="phone" role="group" aria-label="Exemplo de conversa no WhatsApp">
       <div class="screen">
-        <div class="ph-head"><div class="av"><img src="/mark.svg" alt=""></div><div><b>agente público</b><span>apartidário · dados oficiais</span></div></div>
+        <div class="ph-head"><div class="av"><img src="/mark.svg" alt=""></div><div><b>agente público</b><span>dados oficiais</span></div></div>
         <div class="chat">
           <div class="msg eu">Tem um buraco enorme na minha rua há 3 meses. Quem resolve isso?</div>
           <div class="msg ag">Manutenção de ruas é responsabilidade da <strong>prefeitura</strong>. No Rio, o canal oficial é a Central 1746.</div>
@@ -116,7 +116,6 @@
     <h2 id="h-faq" class="t">Perguntas frequentes</h2>
     <div class="faq-g">
       <div><h3>Quanto custa?</h3><p>Nada.</p></div>
-      <div><h3>Vocês são ligados a algum partido ou governo?</h3><p>Não. O projeto é independente e apartidário.</p></div>
       <div><h3>O que acontece com meus dados?</h3><p>Usamos só para te avisar quando abrirmos na sua cidade e para entender onde há mais demanda. Você pode sair da lista quando quiser.</p></div>
     </div>
   </div>
@@ -132,7 +131,7 @@
       <form class="lista" data-origem="convite-final" novalidate>
         <div class="row2">
           <div class="field"><label for="nome-final">Nome</label><input id="nome-final" name="nome" type="text" autocomplete="given-name" required></div>
-          <div class="field"><label for="zap-final">WhatsApp</label><input id="zap-final" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" required></div>
+          <div class="field"><label for="zap-final">WhatsApp</label><input id="zap-final" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" maxlength="15" required></div>
         </div>
         <fieldset class="field"><legend>Cidade</legend>
           <div class="chips">
@@ -146,7 +145,7 @@
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
         <p class="erro" role="alert" hidden></p>
         <div><button class="btn ouro" type="submit">Quero entrar na lista</button></div>
-        <p class="micro">Independente e sem partido. Sair apaga tudo.</p>
+        <p class="micro">Sair apaga tudo.</p>
         <p class="consent">Ao entrar, você aceita receber avisos do Agente Público por WhatsApp. Usamos seu número só para isso. Você pode sair quando quiser e seus dados são apagados.</p>
       </form>
       <div class="ok" tabindex="-1" hidden>
@@ -162,11 +161,11 @@
 <footer>
   <div class="wrap">
     <img src="/logo.svg" alt="agente público" width="746" height="230">
-    <p>Independente e sem partido</p>
   </div>
 </footer>
 
   <script src="/config.js"></script>
+  <script src="/phone.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>
