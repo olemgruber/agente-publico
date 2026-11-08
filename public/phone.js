@@ -40,7 +40,15 @@
     if (/^0+$/.test(rest) || /^(\d)\1{7}$/.test(rest)) {
       return { ok: false, message: "Confira o número do WhatsApp, com DDD." };
     }
-    return { ok: true, digits: d };
+    return { ok: true, digits: d, cidade: cidadeFromDdd(d) };
+  }
+
+  function cidadeFromDdd(digits) {
+    var ddd = String(digits || "").replace(/\D/g, "").slice(0, 2);
+    if (ddd === "21") return "Rio de Janeiro";
+    if (ddd === "11") return "São Paulo";
+    if (ddd.length === 2 && DDDS[ddd]) return "Outra";
+    return "";
   }
 
   function formatBrWhatsapp(raw) {
@@ -53,7 +61,8 @@
 
   var api = {
     parseBrWhatsapp: parseBrWhatsapp,
-    formatBrWhatsapp: formatBrWhatsapp
+    formatBrWhatsapp: formatBrWhatsapp,
+    cidadeFromDdd: cidadeFromDdd
   };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.agentePhone = api;

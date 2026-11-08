@@ -33,13 +33,7 @@
           <div class="field"><label for="nome-hero">Nome</label><input id="nome-hero" name="nome" type="text" autocomplete="given-name" required></div>
           <div class="field"><label for="zap-hero">WhatsApp</label><input id="zap-hero" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" maxlength="15" required></div>
         </div>
-        <fieldset class="field"><legend>Cidade</legend>
-          <div class="chips">
-            <input type="radio" id="c1-hero" name="cidade" value="Rio de Janeiro"><label for="c1-hero">Rio de Janeiro</label>
-            <input type="radio" id="c2-hero" name="cidade" value="São Paulo"><label for="c2-hero">São Paulo</label>
-            <input type="radio" id="c3-hero" name="cidade" value="Outra"><label for="c3-hero">Outra</label>
-          </div>
-        </fieldset>
+        <p class="micro cidade-hint" hidden></p>
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
         <p class="erro" role="alert" hidden></p>
         <div><button class="btn" type="submit">Quero entrar na lista</button></div>
@@ -96,21 +90,6 @@
   </div>
 </section>
 
-<section class="verif" aria-labelledby="h-verif">
-  <div class="wrap">
-    <div>
-      <h2 id="h-verif" class="display">O dono da verdade.</h2>
-      <p class="q">Viu algo no grupo da família? Pergunte antes de repassar.</p>
-      <p class="t2">O agente responde com dados oficiais e fontes confiáveis, e mostra de onde veio cada informação.</p>
-    </div>
-    <div class="mesa" aria-hidden="true">
-      <div class="selo f"><span class="mono">Dado oficial</span><b>fato ✓</b></div>
-      <div class="selo x"><span class="mono">Sem fonte</span><b>falso ×</b></div>
-      <div class="selo m"><span class="mono">Falta contexto</span><b>meia-verdade</b></div>
-    </div>
-  </div>
-</section>
-
 <section class="faq" aria-labelledby="h-faq">
   <div class="wrap">
     <h2 id="h-faq" class="t">Perguntas frequentes</h2>
@@ -133,13 +112,7 @@
           <div class="field"><label for="nome-final">Nome</label><input id="nome-final" name="nome" type="text" autocomplete="given-name" required></div>
           <div class="field"><label for="zap-final">WhatsApp</label><input id="zap-final" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(21) 99999-9999" maxlength="15" required></div>
         </div>
-        <fieldset class="field"><legend>Cidade</legend>
-          <div class="chips">
-            <input type="radio" id="c1-final" name="cidade" value="Rio de Janeiro"><label for="c1-final">Rio de Janeiro</label>
-            <input type="radio" id="c2-final" name="cidade" value="São Paulo"><label for="c2-final">São Paulo</label>
-            <input type="radio" id="c3-final" name="cidade" value="Outra"><label for="c3-final">Outra</label>
-          </div>
-        </fieldset>
+        <p class="micro cidade-hint" hidden></p>
       <div class="field"><label for="tema-final">O que mais te incomoda hoje? <span style="font-weight:400">(opcional)</span></label>
         <select id="tema-final" name="tema"><option value="">Escolha um tema</option><option>Saúde</option><option>Transporte</option><option>Segurança</option><option>Educação</option><option>Saneamento</option><option>Outro</option></select></div>
         <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Não preencha <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
